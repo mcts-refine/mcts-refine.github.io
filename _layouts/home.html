@@ -1,0 +1,97 @@
+---
+layout: default
+refactor: true
+---
+<div class="post-content">
+      LLMs demonstrate strong performance in automated
+software engineering, particularly for code generation and
+issue resolution. While proprietary models like GPT-4o achieve
+high benchmarks scores on SWE-bench, their API dependence,
+cost, and privacy concerns limit adoption. Open-source alternatives
+offer transparency but underperform in complex tasks,
+especially sub-100B parameter models. Although quality Chainof-
+Thought (CoT) data can enhance reasoning, current methods
+face two critical flaws: (1) weak rejection sampling reduces
+data quality, and (2) inadequate step validation causes error
+accumulation. These limitations lead to flawed reasoning chains
+that impair LLMs’ ability to learn reliable issue resolution.
+The paper proposes MCTS-REFINE, an enhanced Monte
+Carlo Tree Search (MCTS)-based algorithm that dynamically
+validates and optimizes intermediate reasoning steps through
+a rigorous rejection sampling strategy, generating high-quality
+CoT data to improve LLM performance in issue resolution tasks.
+Key innovations include: (1) augmenting MCTS with a reflection
+mechanism that corrects errors via rejection sampling and refinement,
+(2) decomposing issue resolution into three subtasks—File
+Localization, Fault Localization, and Patch Generation—each with
+clear ground-truth criteria, and (3) enforcing a strict sampling
+protocol where intermediate outputs must exactly match verified
+developer patches, ensuring correctness across reasoning paths.
+Experiments on SWE-bench Lite and SWE-bench Verified
+demonstrate that LLMs fine-tuned with our CoT dataset achieve
+substantial improvements over baselines. Notably, Qwen2.5-72BInstruct
+achieves 28.3%(Lite) and 35.0%(Verified) resolution
+rates, surpassing SOTA baseline SWE-Fixer-Qwen-72B with the
+same parameter scale, which only reached 24.7%(Lite) and
+32.8%(Verified). Given precise issue locations as input, our finetuned
+Qwen2.5-72B-Instruct model achieves an impressive issue
+resolution rate of 43.8%(Verified), comparable to the performance
+of Deepseek-v3. We open-source our MCTS-REFINE framework,
+CoT dataset, and fine-tuned models to advance research in AIdriven
+software engineering.
+
+<div>
+  <hr>
+  <div>
+    <div>
+      <img src="/assets/images/tool.svg" alt="avatar" style="height: 40px; width: 40px;">
+      <span>
+        <a href="https://mcts-refine.github.io//MCTS-Refine"><strong>A tool to automate generating CoT Data for Issue-Resolving task.</strong></a><br>
+      </span>
+    </div>
+    <div>
+      <img src="/assets/images/repository.svg" alt="avatar" style="height: 50px; width: 50px;">
+      <span>
+        <a href="https://mcts-refine.github.io/ids">
+          <strong>Resolved ids and Tracs using Fine-tuned Models.<br></strong>
+        </a>
+      </span>
+    </div>
+    <div>
+      <img src="/assets/images/pipeline.svg" alt="avatar" style="height: 50px; width: 50px;">
+      <span>
+        <a href="https://mcts-refine.github.io/models">
+          <strong>Fine-tuned Qwen2.5 Models.<br></strong>
+        </a>
+      </span>
+    </div>
+    <div>
+      <img src="/assets/images/download.svg" alt="avatar" style="height: 50px; width: 50px;">
+      <span>
+        <a href="https://mcts-refine.github.io/download">
+          <strong>Download the CoT Data.<br></strong>
+        </a>
+      </span>
+    </div>
+  </div>
+</div>
+<style>
+  .preview-img {
+    display: flex;                   /* 使用 Flexbox 布局 */
+    justify-content: center;         /* 水平居中对齐 */
+    align-items: center;             /* 垂直居中对齐 */
+    width: 60px;                    /* 设置容器宽度 */
+    height: 60px;                   /* 设置容器高度 */
+    border: 1px solid #ccc;         /* 添加边框 */
+    border-radius: 8px;             /* 圆角边框 */
+    background-color: #f9f9f9;      /* 背景颜色 */
+    padding: 5px;                   /* 内边距 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  }
+
+  .preview-img img {
+    max-width: 100%;                /* 确保图像不会超出容器 */
+    max-height: 100%;               /* 确保图像不会超出容器 */
+    object-fit: contain;            /* 保持图像比例 */
+  }
+</style>
