@@ -2,3 +2,82 @@
 layout: home
 # Index page
 ---
+
+<div class="post-content">
+      LLMs demonstrate strong performance in automated
+software engineering, particularly for code generation and
+issue resolution. While proprietary models like GPT-4o achieve
+high benchmarks scores on SWE-bench, their API dependence,
+cost, and privacy concerns limit adoption. Open-source alternatives
+offer transparency but underperform in complex tasks,
+especially sub-100B parameter models. Although quality Chainof-
+Thought (CoT) data can enhance reasoning, current methods
+face two critical flaws: (1) weak rejection sampling reduces
+data quality, and (2) inadequate step validation causes error
+accumulation. These limitations lead to flawed reasoning chains
+that impair LLMs’ ability to learn reliable issue resolution.
+The paper proposes MCTS-REFINE, an enhanced Monte
+Carlo Tree Search (MCTS)-based algorithm that dynamically
+validates and optimizes intermediate reasoning steps through
+a rigorous rejection sampling strategy, generating high-quality
+CoT data to improve LLM performance in issue resolution tasks.
+Key innovations include: (1) augmenting MCTS with a reflection
+mechanism that corrects errors via rejection sampling and refinement,
+(2) decomposing issue resolution into three subtasks—File
+Localization, Fault Localization, and Patch Generation—each with
+clear ground-truth criteria, and (3) enforcing a strict sampling
+protocol where intermediate outputs must exactly match verified
+developer patches, ensuring correctness across reasoning paths.
+Experiments on SWE-bench Lite and SWE-bench Verified
+demonstrate that LLMs fine-tuned with our CoT dataset achieve
+substantial improvements over baselines. Notably, Qwen2.5-72BInstruct
+achieves 28.3%(Lite) and 35.0%(Verified) resolution
+rates, surpassing SOTA baseline SWE-Fixer-Qwen-72B with the
+same parameter scale, which only reached 24.7%(Lite) and
+32.8%(Verified). Given precise issue locations as input, our finetuned
+Qwen2.5-72B-Instruct model achieves an impressive issue
+resolution rate of 43.8%(Verified), comparable to the performance
+of Deepseek-v3. We open-source our MCTS-REFINE framework,
+CoT dataset, and fine-tuned models to advance research in AIdriven
+software engineering.
+
+</div>
+  <hr>
+  <div class="post-content">
+      <div class="logo">
+           <img src="/assets/images/tool.svg" alt="avatar" height="50" width="50">
+          <!-- </a> -->
+          <span>
+              <a href="https://mcts-refine.github.io//MCTS-Refine"><strong> A tool to automate generating CoT Data for Issue-Resolving task.</strong></a><br>
+          </span>
+      </div>
+      <div class="logo">
+           <img src="/assets/images/repository.svg" alt="avatar" height="50" width="50">
+          <!-- </a> -->
+          <span>
+              <a href="https://mcts-refine.github.io/ids">
+              <strong>Resolved ids and Tracs using Fine-tuned Models.<br></strong> 
+          </a>
+          </span>
+      </div>
+      <div class="logo">
+           <img src="/assets/images/pipeline.svg" alt="avatar" height="50" width="50">
+          <!-- </a> -->
+          <span>
+              <a href="https://mcts-refine.github.io/models">
+                  <strong>Fine-tuned Qwen2.5 Models.<br></strong> 
+              </a>
+          </span>
+      </div>
+      <div class="logo">
+          
+           <img src="/assets/images/download.svg" alt="avatar" height="50" width="50">
+          
+          <span>
+              <a href="https://mcts-refine.github.io/download">
+                  <strong>Download the CoT Data.<br></strong>
+              </a>
+          </span>
+      </div>
+
+  </div>
