@@ -17,7 +17,7 @@ pip install requirements.txt
 Sepcific the argument in ```run_mcts.py```
 
 ```python
-    parser = argparse.ArgumentParser(description="MCTS任务执行脚本")
+    parser = argparse.ArgumentParser(description="MCTS script")
     parser.add_argument("--model", type=str, default=r"deepseek", help="Model Generated CoT")
     parser.add_argument("--reward_model", type=str, default=r"deepseek", help="Reward Model")
     parser.add_argument("--task_ids", type=str, help="Path to Task IDs",
