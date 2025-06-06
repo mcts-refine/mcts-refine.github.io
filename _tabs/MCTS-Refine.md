@@ -5,7 +5,7 @@ order: 1
 
 ## Downloads
 [**MCTS-Refine**](https://github.com/mcts-refine/mcts-refine-code)
-## Run Piecer
+## Run MCTS-Refine
 - Step 1
 
 Download the source code and install the requirements.

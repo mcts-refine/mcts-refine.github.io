@@ -4,7 +4,7 @@ order: 2
 ---
 
 ## Resolved IDs with trac
-> A dataset 7,983 library APIs (labelled with workflow stages);
+> Resolved IDs with the Fine-tuned model output;
 {: .prompt-tip }
 [**Download 7B resolved IDs with tracs**](https://github.com/mcts-refine/experimental_data/blob/master/7B.json)
 
