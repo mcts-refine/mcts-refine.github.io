@@ -6,7 +6,7 @@ order: 4
 ## CoT Dataset
 > A CoT dataset for issue resolving task;
 {: .prompt-tip }
-[**Download CoT Dataset**](https://github.com/mcts-refine/experimental_data/blob/master/dataset.json)
+[**Download CoT Dataset**](https://github.com/mcts-refine/mcts-refine.github.io/blob/main/dataset)
 ## Example
 
 ```python

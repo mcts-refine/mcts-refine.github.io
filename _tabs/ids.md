@@ -6,11 +6,11 @@ order: 2
 ## Resolved IDs with trac
 > Resolved IDs with the Fine-tuned model output;
 {: .prompt-tip }
-[**Download 7B resolved IDs with tracs**](https://github.com/mcts-refine/experimental_data/blob/master/7B.json)
+[**Download 7B resolved IDs with tracs**](https://github.com/mcts-refine/mcts-refine.github.io/blob/main/dataset/ids)
 
-[**Download 32B resolved IDs with tracs**](https://github.com/mcts-refine/experimental_data/blob/master/32B.json)
+[**Download 32B resolved IDs with tracs**](https://github.com/mcts-refine/mcts-refine.github.io/blob/main/dataset/ids)
 
-[**Download 72B resolved IDs with tracs**](https://github.com/mcts-refine/experimental_data/blob/master/72B.json)
+[**Download 72B resolved IDs with tracs**](https://github.com/mcts-refine/mcts-refine.github.io/blob/main/dataset/ids)
 
 ## Example
 > django__django-10914.txt
